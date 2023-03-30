@@ -1,6 +1,14 @@
 # TF-IDF: Term Frequency / Inverse Document Frequency
 # Search Algorithm
 # Search engine for Wikipedia using Apache Spark in MLlib
+# #https://sparkbyexamples.com/pyspark/pyspark-py4j-protocol-py4jerror-org-apache-spark-api-python-pythonutils-jvm/
+# Sometimes after changing/upgrading the Spark version, you may get this error due to the version incompatible between pyspark version 
+# and pyspark available at anaconda lib. In order to correct it do the following.
+# Note: copy the specified folder from inside the zip files and make sure you have environment variables set right as mentioned in the beginning.
+# Copy the py4j folder from C:\apps\opt\spark-3.0.0-bin-hadoop2.7\python\lib\py4j-0.10.9-src.zip\ to C:\Programdata\anaconda3\Lib\site-packages\.
+# And, copy pyspark folder from C:\apps\opt\spark-3.0.0-bin-hadoop2.7\python\lib\pyspark.zip\ to C:\Programdata\anaconda3\Lib\site-packages\
+# You may need to restart your console some times even your system in order to affect the environment variables.
+# When I upgraded my Spark version, I was getting this error, and copying the folders specified here resolved my issue.
 # -----------------------------------------------------------
 
 from pyspark import SparkConf, SparkContext
